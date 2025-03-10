@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
@@ -9,9 +9,16 @@ import FAQ from '../components/FAQ';
 import LegalDisclaimer from '../components/LegalDisclaimer';
 import Footer from '../components/Footer';
 import MatrixBackground from '../components/MatrixBackground';
+import AgreementPopup from '../components/AgreementPopup';
 
 const Index = () => {
+  const [showAgreement, setShowAgreement] = useState(false);
+
   useEffect(() => {
+    // Check if user has already agreed to disclaimer
+    const hasAgreed = localStorage.getItem('disclaimerAgreed') === 'true';
+    setShowAgreement(!hasAgreed);
+    
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -39,7 +46,8 @@ const Index = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-slide-up');
-          entry.target.style.opacity = '1';
+          // Fixed: Use setAttribute instead of directly accessing style
+          entry.target.setAttribute('style', 'opacity: 1');
           observer.unobserve(entry.target);
         }
       });
@@ -47,7 +55,8 @@ const Index = () => {
     
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach(el => {
-      el.style.opacity = '0';
+      // Fixed: Use setAttribute instead of directly accessing style
+      el.setAttribute('style', 'opacity: 0');
       observer.observe(el);
     });
     
@@ -64,6 +73,10 @@ const Index = () => {
       console.error('Error loading THREE.js:', error);
     });
   }, []);
+
+  const handleAgreement = () => {
+    setShowAgreement(false);
+  };
 
   return (
     <div className="min-h-screen bg-cyber-black text-white overflow-x-hidden">
@@ -117,6 +130,8 @@ const Index = () => {
       </main>
       
       <Footer />
+      
+      {showAgreement && <AgreementPopup onAgree={handleAgreement} />}
     </div>
   );
 };
