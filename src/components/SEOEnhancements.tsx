@@ -49,13 +49,13 @@ const SEOEnhancements: React.FC = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "AI Web Tools",
-          "item": "https://www.aiwebtools.ai"
+          "item": "https://aiwebtools.lovable.app/?via=aiwebtools"
         },
         {
           "@type": "ListItem", 
           "position": 2,
           "name": "Free AI Tools",
-          "item": "https://www.aiwebtools.ai/free-ai-tools"
+          "item": "https://aiwebtools.lovable.app/?via=aiwebtools"
         },
         {
           "@type": "ListItem",

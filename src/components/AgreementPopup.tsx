@@ -53,7 +53,7 @@ const AgreementPopup: React.FC<AgreementPopupProps> = ({ onAgree }) => {
             </ul>
             
             <p className="text-gray-300 mb-6">
-              By clicking "I Agree", you acknowledge that you have read, understood, and agree to our <a href="https://aiwebtools.ai/terms-of-services" className="text-cyber-green hover:underline">Terms of Service</a> and <a href="https://openai.com/policies/privacy-policy/" className="text-cyber-green hover:underline">Privacy Policy</a>.
+              By clicking "I Agree", you acknowledge that you have read, understood, and agree to our <a href="https://aiwebtools.lovable.app/?via=aiwebtools" className="text-cyber-green hover:underline" target="_blank" rel="noopener noreferrer">Terms of Service</a> and <a href="https://openai.com/policies/privacy-policy/" className="text-cyber-green hover:underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
             </p>
             
             <div className="flex justify-center">
