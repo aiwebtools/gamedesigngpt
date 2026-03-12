@@ -90,8 +90,8 @@ const Footer: React.FC = () => {
             </ul>
             <div className="mt-8">
               <a 
-                href="https://www.aiwebtools.ai" 
-                className="inline-block bg-cyber-green/10 hover:bg-cyber-green/20 text-cyber-green 
+                href="https://aiwebtools.lovable.app/?via=aiwebtools" 
+                className="inline-block bg-cyber-green/10 hover:bg-cyber-green/20 text-cyber-green
                          border border-cyber-green/30 rounded-full px-4 py-2 text-sm font-mono
                          transition-all duration-300"
                 target="_blank"
