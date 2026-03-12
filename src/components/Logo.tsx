@@ -16,7 +16,7 @@ const Logo: React.FC<LogoProps> = ({ className = '' }) => {
         </h1>
         <span className="text-xs text-cyber-green/70 font-mono">
           <a 
-            href="https://www.aiwebtools.ai" 
+            href="https://aiwebtools.lovable.app/?via=aiwebtools" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:text-cyber-green hover:underline transition-colors"
