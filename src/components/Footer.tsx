@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a 
-                  href="https://www.aiwebtools.ai" 
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                   className="text-gray-400 hover:text-cyber-green transition-colors flex items-center"
                   target="_blank"
                   rel="noopener noreferrer"
